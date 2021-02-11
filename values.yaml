@@ -17,12 +17,12 @@ controller:
   ## controller container image
   ##
   image:
-    repository: zenko/zenko-cosbench
-    tag: 0.0.6
+    repository: jkarasev/cosbench
+    tag: 0.0.1
     pullPolicy: IfNotPresent
 
   service:
-    type: ClusterIP
+    type: LoadBalancer
     port: 19088
 
   ingress:
@@ -49,8 +49,8 @@ driver:
   ## driver container image
   ##
   image:
-    repository: zenko/zenko-cosbench
-    tag: 0.0.6
+    repository: jkarasev/cosbench
+    tag: 0.0.1
     pullPolicy: IfNotPresent
 
   service:

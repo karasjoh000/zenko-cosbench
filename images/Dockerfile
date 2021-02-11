@@ -30,4 +30,4 @@ COPY driver.conf ${COSBENCH_DIR}/conf
 # DOCKER STARTUP
 #-------------------------------------
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD java -Dcosbench.tomcat.config=conf/controller-tomcat-server.xml -server -cp main/* org.eclipse.equinox.launcher.Main -configuration controller.conf -console 19089
+CMD java -Dcom.amazonaws.services.s3.disableGetObjectMD5Validation=true -Dcosbench.tomcat.config=conf/controller-tomcat-server.xml -server -cp main/* org.eclipse.equinox.launcher.Main -configuration controller.conf -console 19089

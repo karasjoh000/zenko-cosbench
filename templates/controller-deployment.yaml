@@ -36,4 +36,4 @@ spec:
               value: "{{ .Values.controller.logLevel }}"
             - name: DRIVERS
               value: "{{ template "cosbench.driversList" . }}"
-          args: ['java','-Dcosbench.tomcat.config=conf/controller-tomcat-server.xml','-server','-cp','main/*','org.eclipse.equinox.launcher.Main','-configuration','conf/.controller','-console','19089']
+          args: ['java', '-Dcom.amazonaws.services.s3.disableGetObjectMD5Validation=true', '-Dcosbench.tomcat.config=conf/controller-tomcat-server.xml','-server','-cp','main/*','org.eclipse.equinox.launcher.Main','-configuration','conf/.controller','-console','19089']
